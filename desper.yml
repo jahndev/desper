@@ -1,0 +1,33 @@
+database:
+  driverClass: org.mariadb.jdbc.Driver
+  user: desperdb
+  password: HRHRB2w2d3
+  url: jdbc:mysql://desperdb.cwze0xjbk2up.us-east-1.rds.amazonaws.com/desperdb
+server:
+  adminContextPath: /rest
+  applicationContextPath: /destinder
+  applicationConnectors:
+    - type: http
+      port: 8080
+  adminConnectors:
+    - type: http
+      port: 8443
+logging:
+  appenders:
+  - type: console
+    timeZone: America/Argentina/Buenos_Aires
+  - type: file
+    timeZone: UTC
+    currentLogFilename: desper.log
+    archivedFileCount: 5
+  level: INFO
+  loggers:
+    "com.destinder": DEBUG
+    "org.hibernate.engine.internal": INFO
+    "org.reflections.Reflections": WARN
+    # Redirects SQL logs to a separate file
+    "org.hibernate.SQL": DEBUG
+  requestLog:
+    appenders:
+      - type: console
+        threshold: INFO
