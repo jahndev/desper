@@ -46,9 +46,8 @@ Database:
 
 AWS Console account:
 
-	user: jahnarellano85@gmail.com	
-	password: HRHRB2w2d3
-	https://console.aws.amazon.com/rds/home?region=us-east-1#dbinstances:id=desperdb;sf=all	
+	user: 	
+	password: 
 	
 Configuration Files
 
